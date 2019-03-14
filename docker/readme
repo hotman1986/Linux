@@ -25,3 +25,9 @@ adduser dl
 123456
 123456
 nvidia-docker run --hostname=TFDL --name tf-gpu -v ~/:/home/tang -it -p 6001:6006 -p 8001:8888 tensorflow/tensorflow:2.0.0a0-gpu-py3-jupyter /bin/bash
+addgroup admin
+useradd -d /home/bill -s /bin/bash -m bill
+passwd bill 
+usermod -a -G admin bill
+visudo
+sudo usermod -a -G docker $USER
