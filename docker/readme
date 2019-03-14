@@ -24,3 +24,4 @@ apt install yum
 adduser dl
 123456
 123456
+nvidia-docker run --hostname=TFDL --name tf-gpu -v ~/:/home/tang -it -p 6001:6006 -p 8001:8888 tensorflow/tensorflow:2.0.0a0-gpu-py3-jupyter /bin/bash
